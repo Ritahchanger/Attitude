@@ -7,19 +7,18 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const errorHandler = require("./middlewares/errorMiddleware");
 
-//routes path
+
 const authRoutes = require("./routes/authRoutes");
 
-//dotenv
 dotenv.config();
 
-//mongo connection
+
 connectDB();
 
-//rest object
+
 const app = express();
 
-//middlewares
+
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
